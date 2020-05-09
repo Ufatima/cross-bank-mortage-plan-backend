@@ -20,8 +20,6 @@ import java.util.List;
 @RestController
 public class ProspectsRestController {
 
-    private static String UPLOADED_FOLDER = "src/crosskey/";
-
     @Autowired
     private ProspectService prospectService;
 
@@ -32,8 +30,8 @@ public class ProspectsRestController {
         return response.toString();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
-    @PostMapping("/upload") // //new annotation since 4.3
+    @CrossOrigin
+    @PostMapping("/upload")
     public List<Prospect> singleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
         return prospectService.processProspect(file);
