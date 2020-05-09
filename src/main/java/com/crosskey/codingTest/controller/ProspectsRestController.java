@@ -24,19 +24,25 @@ public class ProspectsRestController {
     @Autowired
     private ProspectService prospectService;
 
-    @CrossOrigin
+    @CrossOrigin("*")
     @PostMapping(value = "/prospect", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     String newProspect(@Valid @RequestBody Prospect prospect){
         Prospect response = prospectService.processSingleProspect(prospect);
         return response.toString();
     }
 
-    @CrossOrigin
+    @CrossOrigin("*")
     @PostMapping("/upload")
     public List<Prospect> singleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
         return prospectService.processProspect(file);
 
+    }
+
+    @CrossOrigin("*")
+    @GetMapping("/")
+    public String hello() {
+        return "hello";
     }
 
 
