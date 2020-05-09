@@ -17,11 +17,7 @@ To install all of its dependencies and start the application, follow the instruc
 ```bash
 ./mvnw spring-boot:run
 ```
-Then, in another window, send a customer data file with http://localhost:9090/upload with curl or postman or your web browser: 
 
-```
-$ curl -F "prospects.txt" http://localhost:9090/upload
-```
 Then, in another window, send one customer data with http://localhost:9090/prospects with curl or postman or your web browser: 
 
 ```
