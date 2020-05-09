@@ -17,20 +17,21 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class ProspectsRestController {
 
     @Autowired
     private ProspectService prospectService;
 
-    @CrossOrigin
+    
     @PostMapping(value = "/prospect", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     String newProspect(@Valid @RequestBody Prospect prospect){
         Prospect response = prospectService.processSingleProspect(prospect);
         return response.toString();
     }
 
-    @CrossOrigin
+    
     @PostMapping("/upload")
     public List<Prospect> singleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
