@@ -49,7 +49,6 @@ public class ProspectService {
     }
 
     public List<Prospect> processProspect(MultipartFile file) {
-        //TODO: return list of prospects
 
         String s = processFileUpload(file);
         List<Prospect> prospects = new ArrayList<>();
@@ -106,7 +105,6 @@ public class ProspectService {
         }
 
         try {
-            // Get the file and save it somewhere
             byte[] bytes = file.getBytes();
             Path path = Paths.get(file.getOriginalFilename());
             Files.write(path, bytes);
