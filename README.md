@@ -17,6 +17,7 @@ To install all of its dependencies and start the application, follow the instruc
 ```bash
 ./mvnw spring-boot:run
 ```
+The app runs on http://localhost:9090
 
 Then, in another window, send one customer data with http://localhost:9090/prospects with curl or postman or your web browser: 
 
