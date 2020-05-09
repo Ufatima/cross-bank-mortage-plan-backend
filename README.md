@@ -1,10 +1,7 @@
 # Mortage plan
-Calculating monthly payment for mortgage loan
+A rest api for calculating loan
 
-## Installation
-### With Yarn
-```bash
-$ yarn start
-```
+This appliacation can calculate loan according to mortgage plan and also can read a text file and print out the result for each customer.
+
+
 ## Try it out!
-https://master.d38owettqxfauy.amplifyapp.com/
