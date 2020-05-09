@@ -24,3 +24,4 @@ Then, in another window, send one customer data with http://localhost:9090/prosp
 ```
 $ curl -d '{ "customerName": "Juha", "totalLoan": 1000.0, "interest": 5.0, "years": 2 }' -H 'Content-Type: application/json' http://localhost:9090/prospect
 ```
+This site was built using [aws beanstalk](http://crosskeyspringrest-env.eba-2nhmp3dm.us-east-1.elasticbeanstalk.com/)
